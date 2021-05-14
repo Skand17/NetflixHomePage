@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React, {useMemo, useState } from 'react'
+import styled from 'styled-components'
 import './App.css';
+import Header from './components/Header/header'
+import Banner from './components/Banner/banner'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Container>
+          <Header/>
+          <Banner/>
+      </Container>
   );
 }
+
+const Container = styled.main`
+  width: 100%;
+`
+
+
 
 export default App;
